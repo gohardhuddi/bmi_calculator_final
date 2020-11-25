@@ -56,8 +56,8 @@ class _InputPageState extends State<InputPage> {
                       });
                     },
                     colour: selectedGender == Gender.male
-                        ? activeCardColor
-                        : incativeCardColor,
+                        ? kActiveCardColor
+                        : kInactiveCardColor,
                     cardChild: icon_contant(
                       icon: FontAwesomeIcons.male,
                       label: 'MALE',
@@ -72,8 +72,8 @@ class _InputPageState extends State<InputPage> {
                       });
                     },
                     colour: selectedGender == Gender.female
-                        ? activeCardColor
-                        : incativeCardColor,
+                        ? kActiveCardColor
+                        : kInactiveCardColor,
                     cardChild: icon_contant(
                       icon: FontAwesomeIcons.female,
                       label: "FEMALE",
@@ -84,7 +84,7 @@ class _InputPageState extends State<InputPage> {
             )),
             Expanded(
               child: Reuseable_card(
-                colour: activeCardColor,
+                colour: kActiveCardColor,
                 cardChild: Column(
                   children: [Text('HEIGHT')],
                 ),
@@ -95,12 +95,12 @@ class _InputPageState extends State<InputPage> {
                 children: [
                   Expanded(
                     child: Reuseable_card(
-                      colour: activeCardColor,
+                      colour: kActiveCardColor,
                     ),
                   ),
                   Expanded(
                     child: Reuseable_card(
-                      colour: activeCardColor,
+                      colour: kActiveCardColor,
                     ),
                   ),
                 ],
@@ -108,8 +108,8 @@ class _InputPageState extends State<InputPage> {
             ),
             Container(
               width: double.infinity,
-              height: BottomContainerHeight,
-              color: BottomContainerColor,
+              height: kBottomContainerHeight,
+              color: kBottomContainerColor,
               margin: EdgeInsets.only(top: 10.0),
             ),
           ],
