@@ -52,38 +52,34 @@ class _InputPageState extends State<InputPage> {
                 child: Row(
               children: [
                 Expanded(
-                  child: GestureDetector(
-                    onTap: () {
+                  child: Reuseable_card(
+                    onPress: () {
                       setState(() {
                         selectedGender = Gender.male;
                       });
                     },
-                    child: Reuseable_card(
-                      colour: selectedGender == Gender.male
-                          ? activeCardColor
-                          : incativeCardColor,
-                      cardChild: icon_contant(
-                        icon: FontAwesomeIcons.male,
-                        label: 'MALE',
-                      ),
+                    colour: selectedGender == Gender.male
+                        ? activeCardColor
+                        : incativeCardColor,
+                    cardChild: icon_contant(
+                      icon: FontAwesomeIcons.male,
+                      label: 'MALE',
                     ),
                   ),
                 ),
                 Expanded(
-                  child: GestureDetector(
-                    onTap: () {
+                  child: Reuseable_card(
+                    onPress: () {
                       setState(() {
                         selectedGender = Gender.female;
                       });
                     },
-                    child: Reuseable_card(
-                      colour: selectedGender == Gender.female
-                          ? activeCardColor
-                          : incativeCardColor,
-                      cardChild: icon_contant(
-                        icon: FontAwesomeIcons.female,
-                        label: "FEMALE",
-                      ),
+                    colour: selectedGender == Gender.female
+                        ? activeCardColor
+                        : incativeCardColor,
+                    cardChild: icon_contant(
+                      icon: FontAwesomeIcons.female,
+                      label: "FEMALE",
                     ),
                   ),
                 ),
