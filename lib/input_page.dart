@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'icon_contents.dart';
+import 'reuseable_card.dart';
 
 const BottomContainerHeight = 80.0;
 const activeCardColor = Color(0xFF1D1F33);
@@ -73,49 +75,5 @@ class _InputPageState extends State<InputPage> {
             )
           ],
         ));
-  }
-}
-
-class icon_contant extends StatelessWidget {
-  icon_contant({this.icon, this.label});
-  final IconData icon;
-  final String label;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Icon(
-          icon,
-          size: 80.0,
-        ),
-        SizedBox(
-          height: 30.0,
-        ),
-        Text(
-          label,
-          style: TextStyle(fontSize: 18.0, color: Color(0xFF555665)),
-        ),
-      ],
-    );
-  }
-}
-
-class Reuseable_card extends StatelessWidget {
-  Reuseable_card({@required this.colour, this.cardChild});
-  final Color colour;
-  final Widget cardChild;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: cardChild,
-      height: 200.0,
-      margin: EdgeInsets.all(15.0),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10.0),
-        color: colour,
-      ),
-    );
   }
 }
